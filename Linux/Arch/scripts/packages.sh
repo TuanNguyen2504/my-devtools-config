@@ -36,13 +36,12 @@ sudo pacman -S gwenview --noconfirm
 sudo pacman -S spectacle --noconfirm
 
 # Office on Linux
-sudo pacman -S libreoffice-still --noconfirm
+# sudo pacman -S libreoffice-still --noconfirm
+# yay -S openoffice-bin --noconfirm
+sudo yay -S wps-office --noconfirm
 
 # Emoji
 sudo pacman -S noto-fonts-emoji --noconfirm
-
-# Apache OpenOffice
-yay -S openoffice-bin --noconfirm
 
 # Peazip
 yay -S peazip-gtk2-bin --noconfirm
@@ -69,8 +68,8 @@ yay -S mongodb-bin mongodb-tools-bin robo3t-bin mongodb-compass --noconfirm
 # Video recorder & editor
 sudo pacman -S kdenlive --noconfirm
 
-# PDF Reader
-sudo pacman -S okular --noconfirm
+# PDF Reader (Recommend: WPS PDF)
+# sudo pacman -S okular --noconfirm
 
 # Photo Editor
 sudo pacman -S krita --noconfirm

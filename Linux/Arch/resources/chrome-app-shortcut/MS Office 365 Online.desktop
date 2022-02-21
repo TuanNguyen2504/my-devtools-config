@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=MS Office 365 Online
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=ocdlmjhbenodhlknglojajgokahchlkk
+Icon=chrome-ocdlmjhbenodhlknglojajgokahchlkk-Default
+StartupWMClass=crx_ocdlmjhbenodhlknglojajgokahchlkk

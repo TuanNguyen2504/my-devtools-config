@@ -14,6 +14,7 @@
 	"vim.useCtrlKeys": true,
 	"vim.useSystemClipboard": true,
 	"vim.ignorecase": false,
+	"vim.autoindent": true,
 
 	"vim.insertModeKeyBindingsNonRecursive": [
 		{
@@ -114,6 +115,10 @@
 			"before": ["Q"],
 			"after": ["c", "i"]
 		},
+		{
+			"before": ["B"],
+			"after": ["F", "{", "a"]
+		},
 
 		// Command mapping
 		{
@@ -201,7 +206,7 @@
 	"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
 	"editor.suggestSelection": "first",
 	"editor.columnSelection": false,
-	"editor.minimap.enabled": false,
+	"editor.autoIndent": "advanced",
 
 	"editor.fontSize": 18,
 	"editor.fontWeight": 400,
@@ -234,7 +239,8 @@
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": true
 	},
-
+	"editor.linkedEditing": false,
+	"editor.minimap.renderCharacters": false,
 	"editor.tokenColorCustomizations": {
 		"[Dyno Nguyen]": {
 			"textMateRules": [
@@ -290,18 +296,21 @@
 			]
 		}
 	},
+
+	// Window & Workbench
 	"window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}",
+	"window.menuBarVisibility": "hidden",
 
 	"workbench.activityBar.visible": true,
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.pinnedTabSizing": "compact",
 	"workbench.iconTheme": "material-icon-theme",
-	"workbench.panel.defaultLocation": "right",
 	"workbench.startupEditor": "none",
 	"workbench.colorTheme": "Dyno Nguyen",
 
 	// Languages
 	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.tsserver.log": "off",
 
 	// formater
 	"[jsonc]": {
@@ -363,7 +372,7 @@
 		"handlebar": "html"
 	},
 	"emmet.triggerExpansionOnTab": true,
-	"emmet.showSuggestionsAsSnippets": true,
+	"emmet.showSuggestionsAsSnippets": false,
 
 	// highlight matching
 	"highlight-matching-tag.styles": {
@@ -434,7 +443,6 @@
 	"extensions.autoUpdate": false,
 	"explorer.confirmDragAndDrop": false,
 	"keyboard.dispatch": "keyCode",
-	"window.menuBarVisibility": "toggle",
 
 	// Dyno File Utils
 	"dynoFileUtils.confirmDelete": false,
@@ -451,28 +459,11 @@
 		"target"
 	],
 	"dynoFileUtils.openFile": true,
-	"dynoFileUtils.templates": [
-		{
-			"label": "ExpressJS MVC",
-			"desc": "Create a MVC pattern with ExpressJS",
-			"isPattern": false,
-			"pattern": "",
-			"folderPath": "D:\\typings\\templates\\expressjs\\basic-mvc"
-		},
-		{
-			"label": "Static Web",
-			"desc": "Create a static web",
-			"isPattern": false,
-			"pattern": "",
-			"folderPath": "D:\\typings\\templates\\static-web"
-		},
-		{
-			"label": "Index Server Config - Express",
-			"desc": "file index.js server configuration",
-			"isPattern": false,
-			"folderPath": "D:\\typings\\templates\\expressjs\\server-config"
-		}
-	],
+
+	// Dyno translator
+	"dynoTranslator.apiKeys": "01096f862dmshab749da3b123256p141e60jsn73d461128bca",
+	"dynoTranslator.languageFrom": "en",
+	"dynoTranslator.languageTo": "vi",
 
 	// code snap
 	"codesnap.showLineNumbers": false,
@@ -480,6 +471,7 @@
 
 	// Others Extension
 	"mdb.confirmRunAll": false,
+	"sync.gist": "6baab12a175727e3b24358d2d077d4c4",
 
 	"auto-rename-tag.activationOnLanguage": [
 		"html",
@@ -492,9 +484,22 @@
 	"color-highlight.markerType": "underline",
 	"color-highlight.markRuler": false,
 	"color-highlight.matchWords": true,
+	"mssql.connections": [
+		{
+			"server": "localhost",
+			"database": "",
+			"authenticationType": "SqlLogin",
+			"user": "sa",
+			"password": "",
+			"emptyPasswordInput": false,
+			"savePassword": true,
+			"profileName": "Localhost"
+		}
+	],
+	"editor.minimap.enabled": false
 
 	// CSharp
-	"csharp.format.enable": true,
+	/* 	"csharp.format.enable": true,
 	"omnisharp.enableImportCompletion": true,
 	"omnisharp.useEditorFormattingSettings": true,
 	"omnisharp.organizeImportsOnFormat": true,
@@ -502,12 +507,11 @@
 	"[csharp]": {
 		"editor.defaultFormatter": "ms-dotnettools.csharp",
 		"editor.tabSize": 4
-	},
+	}, */
 
 	// Java
-	"[java]": {
+	/* 	"[java]": {
 		"editor.tabSize": 4,
 		"editor.defaultFormatter": "redhat.java"
-	},
-	"sync.gist": "6baab12a175727e3b24358d2d077d4c4"
+	}, */
 }

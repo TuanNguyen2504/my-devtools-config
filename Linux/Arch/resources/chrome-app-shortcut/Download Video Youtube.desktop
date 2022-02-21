@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Download Video Youtube
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=cmkfgmoieemgpadpgbmngmndicabbcnm
+Icon=chrome-cmkfgmoieemgpadpgbmngmndicabbcnm-Default
+StartupWMClass=crx_cmkfgmoieemgpadpgbmngmndicabbcnm

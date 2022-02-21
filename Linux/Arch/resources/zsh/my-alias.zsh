@@ -6,10 +6,13 @@ alias b='cd ..'
 alias cls='clear'
 alias ls='ls --color=tty'
 alias lsa='ls -a'
+alias lls='ls -l'
 alias z='zshz 2>&1'
 alias vi='nvim $@'
 alias vsc='code .'
 alias ii='dolphin .'
+alias del='rm -rf $@'
+alias mdg='mkdir $1 && cd $2'
 
 # npm
 alias ni='npm install $@'
@@ -33,6 +36,7 @@ alias yiv='yarn info $@ version'
 
 # git
 alias gs='git status'
+alias gcl='git clone $1'
 alias gcf='git clean -f $@'
 alias gsh='git show $@'
 alias gl='git log'
@@ -43,6 +47,7 @@ function gaex(){
   git add .
   git reset -- $@
 }
+alias gacm='git add . && git commit -m $@'
 alias gcm='git commit -m $@'
 alias gca='git commit --amend'
 alias gcane='git commit --amend --no-edit'
@@ -65,6 +70,9 @@ function save_setting(){
   cp $HOME/.zshrc $HOME/dev/my-devtools-config/Linux/Arch/resources/zsh/.zshrc
   echo 'Save settings successfully'
 }
+alias mongodb_start='sudo mongod --port 27017 --dbpath /storage/database/mongodb'
+alias clean_cache='su -c "echo Before; free -h; sync; echo 3 > /proc/sys/vm/drop_caches; echo After; free -h"'
+alias icon_desktop='mv ~/desktop/* ~/dev/my-devtools-config/Linux/Arch/resources/chrome-app-shortcut'
 
 # quick open
 alias oalias='nvim $ZSH_CUSTOM/my-alias.zsh'
