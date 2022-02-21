@@ -80,6 +80,13 @@ yay -S mssql-server mssql-tools msodbcsql --noconfirm
 # Teamviewer
 yay -S teamviewer --noconfirm
 
+# Valentina Studio, Beekeeper Studio (Navicat Alternative)
+# yay -S beekeeper-studio-bin --noconfirm
+yay -S valentina-studio --noconfirm
+
+# Notepad to open txt file
+sudo pacman -S notepadqq --noconfirm
+
 # Utils
 sudo pacman -S xclip --noconfirm
 

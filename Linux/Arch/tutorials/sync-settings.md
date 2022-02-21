@@ -118,10 +118,12 @@
   sudo pacman -S p7zip
 ```
 
-## Cài bộ Apache OpenOffice trên linux
+## Cài bộ WPS Office (hoặc Libre Office, Open Office) trên linux
 
 ```
+  yay -S wps-office
   yay -S openoffice-bin
+  yay -S libreoffice-still
 ```
 
 ## NodeJs, npm, nvm, yarn
@@ -178,6 +180,20 @@
 
 TeamViewer > Extra > Options > Start teamviewer with system
 
+## Valentina Studio, Beekeeper Studio, DBVisualizer (Navicat Alternative)
+
+```
+  yay -S valentina-studio
+  yay -S beekeeper-studio-bin
+  yay -S dbvis
+```
+
+## Notepad to open txt file
+
+```
+  sudo pacman -S notepadqq
+```
+
 ---
 
 ## Settings
@@ -230,3 +246,5 @@ TeamViewer > Extra > Options > Start teamviewer with system
 ```
   sudo pacman -S fd fzf
 ```
+
+- Add .gitignore file
