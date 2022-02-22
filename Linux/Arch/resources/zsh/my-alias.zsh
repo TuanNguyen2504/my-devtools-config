@@ -6,13 +6,13 @@ alias b='cd ..'
 alias cls='clear'
 alias ls='ls --color=tty'
 alias lsa='ls -a'
-alias lls='ls -l'
+alias ll='ls -l'
 alias z='zshz 2>&1'
 alias vi='nvim $@'
 alias vsc='code .'
 alias ii='dolphin .'
 alias del='rm -rf $@'
-alias mdg='mkdir $1 && cd $2'
+alias md='mkdir -p $@'
 
 # npm
 alias ni='npm install $@'
@@ -31,8 +31,6 @@ alias ya='yarn add $@'
 alias yad='yarn add --dev $@'
 alias yag='yarn global add $@'
 alias yr='yarn remove $@'
-alias yi='yarn info $@'
-alias yiv='yarn info $@ version'
 
 # git
 alias gs='git status'
@@ -63,6 +61,15 @@ function gh(){
 	rm nohup.out
 }
 
+# services
+alias mssql_start='sudo systemctl start mssql-server.service'
+alias mssql_stop='sudo systemctl stop mssql-server.service'
+alias mongodb_start='sudo mongod --port 27017 --dbpath /storage/database/mongodb'
+alias postgres_start='sudo systemctl start postgresql.service'
+alias postgres_stop='sudo systemctl stop postgresql.service'
+alias teamviewer_start='sudo systemctl start teamviewerd.service'
+alias teamviewer_stop='sudo systemctl stop teamviewerd.service'
+
 # utils
 function save_setting(){
   cp $ZSH_CUSTOM/my-alias.zsh $HOME/dev/my-devtools-config/Linux/Arch/resources/zsh/my-alias.zsh
@@ -70,9 +77,7 @@ function save_setting(){
   cp $HOME/.zshrc $HOME/dev/my-devtools-config/Linux/Arch/resources/zsh/.zshrc
   echo 'Save settings successfully'
 }
-alias mongodb_start='sudo mongod --port 27017 --dbpath /storage/database/mongodb'
 alias clean_cache='su -c "echo Before; free -h; sync; echo 3 > /proc/sys/vm/drop_caches; echo After; free -h"'
 alias icon_desktop='mv ~/desktop/* ~/dev/my-devtools-config/Linux/Arch/resources/chrome-app-shortcut'
-
 # quick open
 alias oalias='nvim $ZSH_CUSTOM/my-alias.zsh'

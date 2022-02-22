@@ -1,22 +1,9 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
-Comment[en_US]=
-Comment=
-Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=celnaknmndcdcjcagffhbhciignkeokb
-GenericName[en_US]=
-GenericName=
-Icon=facebook-facebook.com
-MimeType=
-Name[en_US]=Facebook
-Name=Facebook
-Path=
-StartupNotify=true
-StartupWMClass=crx_celnaknmndcdcjcagffhbhciignkeokb
-Terminal=false
-TerminalOptions=
-Type=Application
 Version=1.0
-X-DBUS-ServiceName=
-X-DBUS-StartupType=
-X-KDE-RunOnDiscreteGpu=false
-X-KDE-SubstituteUID=false
-X-KDE-Username=
+Terminal=false
+Type=Application
+Name=Facebook
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=celnaknmndcdcjcagffhbhciignkeokb
+Icon=chrome-celnaknmndcdcjcagffhbhciignkeokb-Default
+StartupWMClass=crx_celnaknmndcdcjcagffhbhciignkeokb

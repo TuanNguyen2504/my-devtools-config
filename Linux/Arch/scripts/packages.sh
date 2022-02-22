@@ -62,8 +62,6 @@ sudo npm install --global yarn
 # Color picker
 yay -S picket --noconfirm
 
-# Mongodb
-yay -S mongodb-bin mongodb-tools-bin robo3t-bin mongodb-compass --noconfirm
 
 # Video recorder & editor
 sudo pacman -S kdenlive --noconfirm
@@ -74,15 +72,20 @@ sudo pacman -S kdenlive --noconfirm
 # Photo Editor
 sudo pacman -S krita --noconfirm
 
+# Database, DBMS
+# DBeaver, Valentina Studio, Beekeeper Studio (Navicat Alternative)
+# yay -S beekeeper-studio-bin --noconfirm
+# yay -S valentina-studio --noconfirm
+sudo pacman -S dbeaver --noconfirm
+# Mongodb
+yay -S mongodb-bin mongodb-tools-bin robo3t-bin --noconfirm
 # SQL server
-yay -S mssql-server mssql-tools msodbcsql --noconfirm
+yay -S mssql-server --noconfirm
+# Postgresql
+sudo pacman -S postgresql --noconfirm
 
 # Teamviewer
 yay -S teamviewer --noconfirm
-
-# Valentina Studio, Beekeeper Studio (Navicat Alternative)
-# yay -S beekeeper-studio-bin --noconfirm
-yay -S valentina-studio --noconfirm
 
 # Notepad to open txt file
 sudo pacman -S notepadqq --noconfirm

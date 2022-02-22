@@ -1,0 +1,10 @@
+[Desktop Entry]
+Exec=google-chrome-stable --profile-directory=Profile\ 4
+Icon[en_US]=google-chrome
+Icon=google-chromium
+MimeType=
+Name[en_US]=Dev Chrome
+Name=Dev Chrome
+StartupNotify=true
+Terminal=false
+Type=Application

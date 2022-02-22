@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=TinyPNG
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=dajelmdchpbihmbgbeondamghnpfnmia
+Icon=chrome-dajelmdchpbihmbgbeondamghnpfnmia-Default
+StartupWMClass=crx_dajelmdchpbihmbgbeondamghnpfnmia

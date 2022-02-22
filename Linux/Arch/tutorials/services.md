@@ -34,35 +34,19 @@
 
   # change owner
   chown mssql /storage/database/mssql/data
-  # change group
 
+  # change group
   chgrp mssql /storage/database/mssql/data
 
   # change location
-  /opt/mssql/bin/mssql-conf set filelocation.defaultdatadir storage/database/mssql/data
+  /opt/mssql/bin/mssql-conf set filelocation.defaultdatadir /storage/database/mssql/data
 
   # move all files to new location
-  mv /var/opt/mssql/data/* /storage/database/mssql/data
+  mv /var/opt/mssql/data/templog.ldf /storage/database/mssql/data
+  mv /var/opt/mssql/data/tempdb.mdf /storage/database/mssql/data
 
   # restart server
   systemctl start mssql-server
-```
-
-> Thay đổi đường dẫn cho log file và backup
-
-```sh
-  # Log file
-  sudo mkdir /storage/database/mssql/log
-  sudo chown mssql /storage/database/mssql/log
-  sudo chgrp mssql /storage/database/mssql/log
-  sudo /opt/mssql/bin/mssql-conf set filelocation.defaultlogdir /storage/database/mssql/log
-  sudo mv /var/opt/mssql/log/* /storage/database/mssql/log
-
-  # Backup file
-  sudo mkdir /storage/database/mssql/backup
-  sudo chown mssql /storage/database/mssql/backup
-  sudo chgrp mssql /storage/database/mssql/backup
-  sudo /opt/mssql/bin/mssql-conf set filelocation.defaultbackupdir /storage/database/mssql/backup
 ```
 
 > Service
@@ -78,6 +62,21 @@
 
 ```
   sudo mongod --port 27017 --dbpath /storage/database/mongodb
+```
+
+## Postgresql
+
+```sh
+  mkdir /storage/database/postgresql/data
+  sudo passwd postgres
+  sudo chown postgres /storage/database/postgresql/data
+  sudo chgrp postgres /storage/database/postgresql/data
+  sudo -u postgres -i
+  initdb --locale $LANG -E UTF8 -D /storage/database/postgresql/data
+  sudo systemctl daemon-reload
+  sudo nvim /usr/lib/systemd/system/postgresql.service
+  # Change $PGROOT=/storage/database/postgresql/data
+  sudo systemctl start postgresql.service
 ```
 
 ## Teamviewer

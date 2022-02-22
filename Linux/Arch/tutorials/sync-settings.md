@@ -180,9 +180,10 @@
 
 TeamViewer > Extra > Options > Start teamviewer with system
 
-## Valentina Studio, Beekeeper Studio, DBVisualizer (Navicat Alternative)
+## DBeaver, Valentina Studio, Beekeeper Studio, DBVisualizer (Navicat Alternative)
 
 ```
+  pacman -S dbeaver
   yay -S valentina-studio
   yay -S beekeeper-studio-bin
   yay -S dbvis
