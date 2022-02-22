@@ -87,6 +87,9 @@ yay -S valentina-studio --noconfirm
 # Notepad to open txt file
 sudo pacman -S notepadqq --noconfirm
 
+# Trash management
+sudo pacman -S trash-cli --noconfirm
+
 # Utils
 sudo pacman -S xclip --noconfirm
 
