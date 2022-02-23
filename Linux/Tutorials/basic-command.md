@@ -232,3 +232,166 @@
   # Chuẩn và lỗi
   ls && ls -123 &> std.txt
 ```
+
+---
+
+## Pipe command
+
+> Đầu ra command_1 là đầu vào của command_2 ...
+
+```
+  command_1 | command_2 | ...
+```
+
+**Ex:**
+
+```sh
+  echo "foo bar baz" | wc -w
+  # => 3
+```
+
+---
+
+## Lọc dữ liệu
+
+> Lọc dữ liệu theo dòng với `grep`
+
+```sh
+  grep <keyword> <file_path>
+
+  # Hiển thị thêm số dòng
+  grep -n ...
+
+  # Không phân biệt hoa thường
+  grep -i ...
+```
+
+> Lọc dữ liệu theo cột `cut`
+
+```sh
+  cut -d'<separator>' -f<column_num> <file_path>
+```
+
+**Ex:**
+
+```
+  cat input.txt
+
+  1:2:3
+  4:5:6
+```
+
+```
+  cut -d':' -f2 input.txt
+  => 2
+     5
+```
+
+---
+
+## Tiến trình - Process
+
+> Liệt kê tiến trình do người dùng khởi tạo
+
+```
+  ps
+```
+
+> Liệt kê tất cả tiến trình (cả system)
+
+```
+  ps aux
+```
+
+> Huỷ 1 tiến trình đang chạy
+
+```
+  kill <PID>
+```
+
+---
+
+## Xem cấu hình máy
+
+```sh
+  # CPU
+  cat /proc/cpuinfo
+
+  # RAM
+  cat /proc/meminfo
+  free -h
+
+  # Ổ cứng
+  df -h
+```
+
+---
+
+## Cấu hình mạng cơ bản
+
+> Lệnh xem địa chỉ mạng:
+
+```sh
+  ip a
+  ip route
+  cat /etc/resolv.conf
+
+  # name server lookup
+  nslookup <domain_name>
+```
+
+> Cấu hình card mạng
+
+```sh
+  /etc/sysconfig/network-scripts
+  # ./ifcfg-<Card_name>
+  # ./ifcfg-lo
+```
+
+> Cấu hình mạng
+
+- vị trí lưu ở `/etc/netctl` hoặc `/etc/NetworkManager` (arch linux dùng netctl). Với Red hat base thì `/etc/systemconf/network-scripts`
+
+---
+
+## Cấu hình firewall với `iptables`. (Có thể dùng `firewalld`):
+
+```
+  sudo systemctl start iptables.service
+```
+
+- Mở port ở file `/etc/iptables/iptables.rules`
+
+```sh
+  # Empty iptables rule file
+  *filter
+  :INPUT ACCEPT [0:0]
+  :FORWARD ACCEPT [0:0]
+  -A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+  -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+  -A OUTPUT -p tcp --dport 443 -j REJECT
+  :OUTPUT ACCEPT [0:0]
+  COMMIT
+```
+
+- Xem cấu hình iptables
+
+```sh
+  iptables -L
+  iptables -L -v -n --line-number
+```
+
+- Dùng `netstat` hoặc `ss` để xem các port đang mở trên thiết bị:
+
+```
+  ss -tlpn
+```
+
+![Iptable](../../Images/iptables1.jpg)
+![Iptable](../../Images/iptables2.jpg)
+![Iptable](../../Images/iptables3.jpg)
+![Iptable](../../Images/iptables4.jpg)
+![Iptable](../../Images/iptables5.jpg)
+![Iptable](../../Images/iptables6.jpg)
+![Iptable](../../Images/iptables7.jpg)
+![Iptable](../../Images/iptables8.jpg)
