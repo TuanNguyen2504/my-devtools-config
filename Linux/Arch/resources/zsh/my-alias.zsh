@@ -9,9 +9,11 @@ alias lsa='ls -a'
 alias ll='ls -l'
 alias z='zshz 2>&1'
 alias vi='nvim $@'
+alias svi='sudo nvim $@'
 alias vsc='code .'
 alias ii='dolphin .'
 alias del='rm -rf $@'
+alias sdel='sudo rm -rf $@'
 alias md='mkdir -p $@'
 
 # npm
@@ -61,23 +63,41 @@ function gh(){
 	rm nohup.out
 }
 
+# JS & TS
+function tsrun(){
+  tsc $1
+  node $1
+}
+
 # services
+alias svc_start='sudo systemctl start $@'
+alias svc_stop='sudo systemctl stop $@'
+alias svc_status='systemctl status $@'
+alias svc_restart='sudo systemctl restart $@'
+alias svc_enable='sudo systemctl enable $@'
+alias svc_disable='sudo systemctl disable $@'
+
 alias mssql_start='sudo systemctl start mssql-server.service'
 alias mssql_stop='sudo systemctl stop mssql-server.service'
 alias mongodb_start='sudo mongod --port 27017 --dbpath /storage/database/mongodb'
 alias postgres_start='sudo systemctl start postgresql.service'
 alias postgres_stop='sudo systemctl stop postgresql.service'
+alias mariadb_start='sudo /usr/bin/mysqld_safe --datadir=/storage/database/mysql --nowatch'
+alias mariadb_stop='sudo pkill -9 mariadbd'
+
 alias teamviewer_start='sudo systemctl start teamviewerd.service'
 alias teamviewer_stop='sudo systemctl stop teamviewerd.service'
+alias apache_webserver_start='sudo mkdir /run/httpd 2> /dev/null && systemctl start httpd'
 
 # utils
 function save_setting(){
-  cp $ZSH_CUSTOM/my-alias.zsh $HOME/dev/my-devtools-config/Linux/Arch/resources/zsh/my-alias.zsh
-  cp $HOME/.config/Code/User/settings.json $HOME/dev/my-devtools-config/Vscode/settings.json
-  cp $HOME/.zshrc $HOME/dev/my-devtools-config/Linux/Arch/resources/zsh/.zshrc
+  cp $ZSH_CUSTOM/my-alias.zsh $HOME/development/my-devtools-config/Linux/Arch/resources/zsh/my-alias.zsh
+  cp $HOME/.config/Code/User/settings.json $HOME/development/my-devtools-config/Vscode/settings.json
+  cp $HOME/.zshrc $HOME/development/my-devtools-config/Linux/Arch/resources/zsh/.zshrc
   echo 'Save settings successfully'
 }
-alias clean_cache='su -c "echo Before; free -h; sync; echo 3 > /proc/sys/vm/drop_caches; echo After; free -h"'
-alias icon_desktop='mv ~/desktop/* ~/dev/my-devtools-config/Linux/Arch/resources/chrome-app-shortcut'
+alias clean_cache='su -c "echo Before; free -h | head -n 2; sync; echo 3 > /proc/sys/vm/drop_caches; echo After; free -h | head -n 2"'
+alias icon_desktop='mv ~/desktop/* ~/development/my-devtools-config/Linux/Arch/resources/chrome-app-shortcut'
+
 # quick open
-alias oalias='nvim $ZSH_CUSTOM/my-alias.zsh'
+alias oalias=' nvim $ZSH_CUSTOM/my-alias.zsh'

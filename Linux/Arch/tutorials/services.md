@@ -79,6 +79,22 @@
   sudo systemctl start postgresql.service
 ```
 
+## MariaDB
+
+```sh
+  sudo pacman -S mariadb
+  mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+  mysql_secure_installation
+  systemctl start mariadb
+
+  # Fix error
+  sudo /usr/bin/mysqld_safe --datadir='/var/lib/mysql'
+```
+
+## Apache Server
+
+[Document Here](../services/apache-php.md)
+
 ## Teamviewer
 
 ```

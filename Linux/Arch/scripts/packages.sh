@@ -36,9 +36,9 @@ sudo pacman -S gwenview --noconfirm
 sudo pacman -S spectacle --noconfirm
 
 # Office on Linux
+# sudo yay -S wps-office --noconfirm
 # sudo pacman -S libreoffice-still --noconfirm
 # yay -S openoffice-bin --noconfirm
-sudo yay -S wps-office --noconfirm
 
 # Emoji
 sudo pacman -S noto-fonts-emoji --noconfirm
@@ -62,21 +62,18 @@ sudo npm install --global yarn
 # Color picker
 yay -S picket --noconfirm
 
-
 # Video recorder & editor
 sudo pacman -S kdenlive --noconfirm
-
-# PDF Reader (Recommend: WPS PDF)
-# sudo pacman -S okular --noconfirm
 
 # Photo Editor
 sudo pacman -S krita --noconfirm
 
 # Database, DBMS
+sudo pacman -S dbeaver --noconfirm
 # DBeaver, Valentina Studio, Beekeeper Studio (Navicat Alternative)
 # yay -S beekeeper-studio-bin --noconfirm
 # yay -S valentina-studio --noconfirm
-sudo pacman -S dbeaver --noconfirm
+
 # Mongodb
 yay -S mongodb-bin mongodb-tools-bin robo3t-bin --noconfirm
 # SQL server
@@ -93,9 +90,26 @@ sudo pacman -S notepadqq --noconfirm
 # Trash management
 sudo pacman -S trash-cli --noconfirm
 
+# Bitwarden to password storage
+sudo pacman -S bitwarden --noconfirm
+
+# Linux System Optimizer and Monitoring
+yay -S stacer-bin --noconfirm
+
+# Paint
+sudo pacman -S pinta --noconfirm
+
 # Utils
 sudo pacman -S xclip --noconfirm
 
-# Update all
-yay -Su --noconfirm
+# Audio editor
+# sudo pacman -S ardour --noconfirm
+
+# Multiple Social network in one
+# yay -S rambox-bin --noconfirm
+
+# PDF Reader (Recommend: WPS PDF)
+sudo pacman -S okular --noconfirm
+
+# Remove cache file
 yay -Sc --noconfirm
