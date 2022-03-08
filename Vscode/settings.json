@@ -301,7 +301,6 @@
 	// Window & Workbench
 	"window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}",
 	"window.menuBarVisibility": "hidden",
-
 	"workbench.activityBar.visible": true,
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.pinnedTabSizing": "compact",
@@ -508,5 +507,6 @@
 
 	// PHP
 	"php.validate.executablePath": "/usr/bin/php",
-	"intelephense.format.enable": true
+	"intelephense.format.enable": true,
+	"phpConstructor.visibility": "private"
 }

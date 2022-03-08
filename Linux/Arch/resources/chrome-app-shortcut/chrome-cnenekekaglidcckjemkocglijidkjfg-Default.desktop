@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=CDN JS Libraries
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=cnenekekaglidcckjemkocglijidkjfg
+Icon=chrome-cnenekekaglidcckjemkocglijidkjfg-Default
+StartupWMClass=crx_cnenekekaglidcckjemkocglijidkjfg

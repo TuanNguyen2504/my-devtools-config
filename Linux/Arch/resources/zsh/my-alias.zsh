@@ -92,8 +92,12 @@ alias apache_webserver_start='sudo mkdir /run/httpd 2> /dev/null && systemctl st
 # utils
 function save_setting(){
   cp $ZSH_CUSTOM/my-alias.zsh $HOME/development/my-devtools-config/Linux/Arch/resources/zsh/my-alias.zsh
-  cp $HOME/.config/Code/User/settings.json $HOME/development/my-devtools-config/Vscode/settings.json
   cp $HOME/.zshrc $HOME/development/my-devtools-config/Linux/Arch/resources/zsh/.zshrc
+
+  cp $HOME/.config/Code/User/settings.json $HOME/development/my-devtools-config/Vscode/settings.json
+  cp $HOME/.config/Code/User/keybindings.json $HOME/development/my-devtools-config/Vscode/keybindings.json
+  cp $HOME/.config/Code/User/snippets/* $HOME/development/my-devtools-config/Vscode/snippets
+
   echo 'Save settings successfully'
 }
 alias clean_cache='su -c "echo Before; free -h | head -n 2; sync; echo 3 > /proc/sys/vm/drop_caches; echo After; free -h | head -n 2"'

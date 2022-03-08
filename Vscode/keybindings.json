@@ -129,6 +129,10 @@
 		"key": "alt+p",
 		"command": "extension.convert-to-pug"
 	},
+	{
+		"command": "workbench.action.showCommands",
+		"key": "shift shift"
+	},
 
 	// Removed
 	{
@@ -239,5 +243,34 @@
 	{
 		"key": "ctrl+k ctrl+c",
 		"command": "workbench.files.action.collapseExplorerFolders"
+	},
+	{
+		"key": "alt+t",
+		"command": "-dynoFileUtils.useTemplate"
+	},
+	{
+		"key": "alt+t",
+		"command": "dyno-translator.translate"
+	},
+	{
+		"key": "ctrl+alt+t",
+		"command": "dyno-translator.translator-box"
+	},
+	{
+		"key": "ctrl+m",
+		"command": "-editor.action.toggleTabFocusMode"
+	},
+	{
+		"key": "ctrl+m",
+		"command": "-extension.vim_ctrl+m",
+		"when": "editorTextFocus && vim.active && vim.use<C-m> && !inDebugRepl || vim.active && vim.use<C-m> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-m> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+	},
+	{
+		"key": "ctrl+m",
+		"command": "editor.action.toggleMinimap"
+	},
+	{
+		"key": "alt+c",
+		"command": "phpConstructor.insert"
 	}
 ]

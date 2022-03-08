@@ -1,0 +1,32 @@
+{
+	"Create a constructor": {
+		"prefix": "ctor",
+		"body": ["public function __construct($1)", "{", "    $2", "}"],
+		"description": "Create a constructor"
+	},
+	"Print Beautifully": {
+		"prefix": "preprint",
+		"body": ["echo '<pre>';", "print_r($1);", "echo '</pre>';"],
+		"description": "Print Beautifully"
+	},
+	"Generate getter & setter": {
+		"prefix": "pgs",
+		"body": [
+			"public function __get(\\$property)",
+			"{",
+			"    if (property_exists(\\$this, \\$property)) {",
+			"        return \\$this->\\$property;",
+			"    }",
+			"    return null;",
+			"}",
+			"",
+			"public function __set(\\$property, \\$value)",
+			"{",
+			"    if (property_exists(\\$this, \\$property)) {",
+			"        \\$this->\\$property = \\$value;",
+			"    }",
+			"}"
+		],
+		"description": "Generate getter & setter"
+	}
+}
