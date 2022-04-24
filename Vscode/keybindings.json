@@ -130,12 +130,6 @@
 		"command": "extension.convert-to-pug"
 	},
 	{
-		"command": "workbench.action.showCommands",
-		"key": "shift shift"
-	},
-
-	// Removed
-	{
 		"key": "shift+alt+left",
 		"command": "-editor.action.smartSelect.shrink",
 		"when": "editorTextFocus"

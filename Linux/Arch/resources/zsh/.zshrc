@@ -87,6 +87,8 @@ plugins=(git zsh-z zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+LS_COLORS+=':ow=04;33'
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

@@ -162,7 +162,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "jquery-typing",
 		"body": [
-			"/// <reference path=\"D:\\typings\\jquery\\globals\\jquery\\index.d.ts\" />"
+			"/// <reference path=\"/home/dyno/development/my-devtools-config/Vscode/typings/jquery/globals/jquery/index.d.ts\" />"
 		],
 		"description": "Create snippet jquery"
 	},

@@ -5,12 +5,10 @@ unalias -m '*'
 alias b='cd ..'
 alias cls='clear'
 alias ls='ls --color=tty'
-alias lsa='ls -a'
 alias ll='ls -l'
 alias z='zshz 2>&1'
 alias vi='nvim $@'
 alias svi='sudo nvim $@'
-alias vsc='code .'
 alias ii='dolphin .'
 alias del='rm -rf $@'
 alias sdel='sudo rm -rf $@'
@@ -21,9 +19,6 @@ alias ni='npm install $@'
 alias nig='sudo npm --global install $@'
 alias nid='npm install --save-dev $@'
 alias ns='npm start'
-alias nd='npm run dev'
-alias nt='npm run test'
-alias nb='npm run build'
 
 # yarn
 alias ys='yarn start'
@@ -59,15 +54,23 @@ alias gpuo='git push -u origin $@'
 alias grv='git remote -v'
 alias gpl='git pull'
 function gh(){
-	nohup xdg-open $(git config remote.origin.url) &
+	nohup xdg-open $(git config remote.origin.url)
 	rm nohup.out
 }
 
-# JS & TS
-function tsrun(){
-  tsc $1
-  node $1
+# Docker
+alias drac='docker rm -f $(docker ps -a -q)'
+alias drav='docker volume rm $(docker volume ls -q)'
+alias drai='docker rmi -f $(docker images -q)'
+alias dram='docker-machine rm $(docker-machine ls -q)'
+alias dm='docker-machine $@'
+alias dls='docker ps -a'
+alias drm='docker rm -f $@'
+alias de='docker exec -it $@'
+function deb(){ 
+  docker exec -it $1 bash
 }
+
 
 # services
 alias svc_start='sudo systemctl start $@'
@@ -79,15 +82,12 @@ alias svc_disable='sudo systemctl disable $@'
 
 alias mssql_start='sudo systemctl start mssql-server.service'
 alias mssql_stop='sudo systemctl stop mssql-server.service'
-alias mongodb_start='sudo mongod --port 27017 --dbpath /storage/database/mongodb'
-alias postgres_start='sudo systemctl start postgresql.service'
-alias postgres_stop='sudo systemctl stop postgresql.service'
-alias mariadb_start='sudo /usr/bin/mysqld_safe --datadir=/storage/database/mysql --nowatch'
-alias mariadb_stop='sudo pkill -9 mariadbd'
 
 alias teamviewer_start='sudo systemctl start teamviewerd.service'
 alias teamviewer_stop='sudo systemctl stop teamviewerd.service'
 alias apache_webserver_start='sudo mkdir /run/httpd 2> /dev/null && systemctl start httpd'
+
+alias docker_stop='sudo systemctl stop docker.socket; sudo systemctl stop docker.service'
 
 # utils
 function save_setting(){

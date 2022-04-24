@@ -108,3 +108,15 @@
   systemctl list-units | grep dhcp
   systemctl start dhcpdc@interface
 ```
+
+## Connect to Iphone
+
+```sh
+  sudo pacman -S libimobiledevice # needed protocols to connect
+  yay -S ifuse # needed to mount
+  systemctl start usbmuxd.service # ensure service running
+  idevicepair pair # pair phone
+  mkdir /mnt/iphone # place to mount
+  sudo ifuse -o allow_other /mnt/iphone # mount phone
+  ls /mnt/iphone # go explore
+```

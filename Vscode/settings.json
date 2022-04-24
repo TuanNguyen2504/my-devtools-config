@@ -296,7 +296,6 @@
 			]
 		}
 	},
-	"editor.minimap.enabled": false,
 
 	// Window & Workbench
 	"window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}",
@@ -462,7 +461,10 @@
 		"bin",
 		"obj",
 		".",
-		"target"
+		"target",
+		"database",
+		"db",
+		"vendor"
 	],
 	"dynoFileUtils.openFile": true,
 
@@ -500,13 +502,17 @@
 	}, */
 
 	// Java
-	/* 	"[java]": {
+	"[java]": {
 		"editor.tabSize": 4,
 		"editor.defaultFormatter": "redhat.java"
-	}, */
+	},
 
 	// PHP
 	"php.validate.executablePath": "/usr/bin/php",
 	"intelephense.format.enable": true,
-	"phpConstructor.visibility": "private"
+	"phpConstructor.visibility": "private",
+	"redhat.telemetry.enabled": false,
+	"extensions.ignoreRecommendations": true,
+	"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/dyno/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+	"editor.minimap.enabled": false
 }

@@ -99,6 +99,9 @@ yay -S stacer-bin --noconfirm
 # Paint
 sudo pacman -S pinta --noconfirm
 
+# Docker
+sudo pacman -S docker docker-compose docker-machine --noconfirm
+
 # Utils
 sudo pacman -S xclip --noconfirm
 
