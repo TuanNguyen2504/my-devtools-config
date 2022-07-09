@@ -194,7 +194,7 @@
 			"    $4",
 			"  } catch (error) {",
 			"    console.error('Function $1 Error: ', error);",
-			"    return res.render('404');",
+			"    return res.status(500).json();",
 			"  }",
 			"}"
 		],

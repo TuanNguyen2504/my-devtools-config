@@ -266,5 +266,9 @@
 	{
 		"key": "alt+c",
 		"command": "phpConstructor.insert"
+	},
+	{
+		"key": "ctrl+alt+n",
+		"command": "dynoFileUtils.newItemsAtCurrentPath"
 	}
 ]

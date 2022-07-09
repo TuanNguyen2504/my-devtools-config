@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=SVGOMG
+Exec=/opt/google/chrome/google-chrome "--profile-directory=Profile 4" --app-id=fnmicjfnikdcalhlcnfdonbodeiabomm
+Icon=chrome-fnmicjfnikdcalhlcnfdonbodeiabomm-Profile_4
+StartupWMClass=crx_fnmicjfnikdcalhlcnfdonbodeiabomm

@@ -63,3 +63,8 @@
   sudo nvim /etc/systemd/journald.conf
   Storage=none
 ```
+
+6. Sửa lỗi không thể tự động connect âm thanh pulseaudio
+
+- Gỡ pulseaudio, pulseaudio-bluetooth
+- Cài pipewire, pipewrie-pulse

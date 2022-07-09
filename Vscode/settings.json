@@ -296,22 +296,26 @@
 			]
 		}
 	},
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"editor.unicodeHighlight.nonBasicASCII": false,
 
 	// Window & Workbench
 	"window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}",
 	"window.menuBarVisibility": "hidden",
-	"workbench.activityBar.visible": true,
+	"window.titleBarStyle": "custom",
+	"window.customMenuBarAltFocus": false,
+	"window.enableMenuBarMnemonics": false,
 	"workbench.editor.enablePreview": false,
+	"workbench.activityBar.visible": true,
 	"workbench.editor.pinnedTabSizing": "compact",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.startupEditor": "none",
 	"workbench.colorTheme": "Dyno Nguyen",
-
-	// Languages
-	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.tsserver.log": "off",
 
-	// formater
+	// formatter
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
@@ -347,6 +351,11 @@
 		"editor.insertSpaces": true,
 		"editor.detectIndentation": true
 	},
+	"[java]": {
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "redhat.java"
+	},
+
 	"files.associations": {
 		"*.min.*": "plaintext"
 	},
@@ -357,6 +366,7 @@
 	"autoprefixer.formatOnSave": true,
 	"prettier.trailingComma": "all",
 	"prettier.useTabs": true,
+	"prettier.arrowParens": "avoid",
 
 	// Indent
 	"indentRainbow.colors": [
@@ -373,8 +383,9 @@
 	"emmet.includeLanguages": {
 		"markdown": "html",
 		// "javascript": "javascriptreact",
-		"typescript": "html",
-		"handlebar": "html"
+		// "typescript": "html",
+		"handlebar": "html",
+		"postcss": "css"
 	},
 	"emmet.triggerExpansionOnTab": true,
 	"emmet.showSuggestionsAsSnippets": false,
@@ -392,17 +403,6 @@
 	"git.enableSmartCommit": true,
 	"git.decorations.enabled": true,
 	"git.autofetch": true,
-
-	// Git lens
-	"gitlens.hovers.currentLine.over": "line",
-	"gitlens.currentLine.enabled": false,
-	"gitlens.codeLens.enabled": false,
-	"gitlens.mode.statusBar.enabled": true,
-	"gitlens.defaultDateFormat": null,
-	"gitlens.defaultTimeFormat": null,
-	"gitlens.defaultDateShortFormat": null,
-	"gitlens.defaultDateStyle": "relative",
-	"gitlens.hovers.currentLine.enabled": false,
 
 	// file browser
 	"files.exclude": {
@@ -429,6 +429,7 @@
 	},
 	"explorer.compactFolders": false,
 	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
 
 	// Terminal
 	/*
@@ -440,13 +441,12 @@
 	"terminal.integrated.fontSize": 15,
 	"terminal.integrated.cursorStyle": "line",
 	"terminal.integrated.letterSpacing": 0.25,
-	"terminal.integrated.tabs.enabled": false,
 	"terminal.integrated.defaultProfile.linux": "zsh",
 
 	// Others Native settings
 	"breadcrumbs.icons": false,
 	"extensions.autoUpdate": false,
-	"explorer.confirmDragAndDrop": false,
+	"extensions.ignoreRecommendations": true,
 	"keyboard.dispatch": "keyCode",
 
 	// Dyno File Utils
@@ -474,8 +474,6 @@
 	"dynoTranslator.languageTo": "vi",
 
 	// Others Extension
-	"mdb.confirmRunAll": false,
-
 	"auto-rename-tag.activationOnLanguage": [
 		"php",
 		"html",
@@ -490,29 +488,16 @@
 	"color-highlight.markRuler": false,
 	"color-highlight.matchWords": true,
 
-	// CSharp
-	/* 	"csharp.format.enable": true,
-	"omnisharp.enableImportCompletion": true,
-	"omnisharp.useEditorFormattingSettings": true,
-	"omnisharp.organizeImportsOnFormat": true,
-
-	"[csharp]": {
-		"editor.defaultFormatter": "ms-dotnettools.csharp",
-		"editor.tabSize": 4
-	}, */
-
-	// Java
-	"[java]": {
-		"editor.tabSize": 4,
-		"editor.defaultFormatter": "redhat.java"
-	},
-
 	// PHP
 	"php.validate.executablePath": "/usr/bin/php",
 	"intelephense.format.enable": true,
-	"phpConstructor.visibility": "private",
-	"redhat.telemetry.enabled": false,
-	"extensions.ignoreRecommendations": true,
-	"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/dyno/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-	"editor.minimap.enabled": false
+
+	"eslint.alwaysShowStatus": true,
+
+	// TailwindCSS
+	"tailwindCSS.emmetCompletions": true,
+	"tailwindCSS.colorDecorators": false,
+	"editor.minimap.enabled": false,
+	"terminal.integrated.shellIntegration.enabled": true,
+	"terminal.integrated.tabs.enabled": false
 }

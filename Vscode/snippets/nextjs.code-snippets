@@ -1,0 +1,42 @@
+{
+	"getStaticProps": {
+		"prefix": "gsp",
+		"body": [
+			"export const getStaticProps: GetStaticProps = async (context) => {",
+			"  $1",
+			"  return {",
+			"    props: {}",
+			"  }",
+			"}"
+		],
+		"description": "getStaticProps",
+		"scope": "typescript,typescriptreact"
+	},
+	"getStaticPaths": {
+		"prefix": "gspath",
+		"body": [
+			"export const getStaticPaths: GetStaticPaths = async (context) => {",
+			"  $1",
+			"  return {",
+			"    paths: [",
+			"      { params: {} }",
+			"    ],",
+			"    fallback: true",
+			"  }",
+			"}"
+		],
+		"description": "getStaticPaths"
+	},
+	"getServerSideProps": {
+		"prefix": "gssp",
+		"body": [
+			"export const getServerSideProps: GetServerSideProps = async (context) => {",
+			"  $1",
+			"  return {",
+			"    props: {}",
+			"  }",
+			"}"
+		],
+		"description": "getServerSideProps"
+	}
+}
