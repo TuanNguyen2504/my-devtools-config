@@ -340,7 +340,7 @@
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.matchBrackets": "never"
+		"editor.matchBrackets": "always"
 	},
 	"[scss]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -390,15 +390,6 @@
 	"emmet.triggerExpansionOnTab": true,
 	"emmet.showSuggestionsAsSnippets": false,
 
-	// highlight matching
-	"highlight-matching-tag.styles": {
-		"opening": {
-			"name": {
-				"surround": "#e5f560"
-			}
-		}
-	},
-
 	// git
 	"git.enableSmartCommit": true,
 	"git.decorations.enabled": true,
@@ -430,6 +421,7 @@
 	"explorer.compactFolders": false,
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
+	"eslint.alwaysShowStatus": true,
 
 	// Terminal
 	/*
@@ -488,11 +480,18 @@
 	"color-highlight.markRuler": false,
 	"color-highlight.matchWords": true,
 
+	// highlight matching
+	"highlight-matching-tag.styles": {
+		"opening": {
+			"name": {
+				"surround": "#e5f560"
+			}
+		}
+	},
+
 	// PHP
 	"php.validate.executablePath": "/usr/bin/php",
 	"intelephense.format.enable": true,
-
-	"eslint.alwaysShowStatus": true,
 
 	// TailwindCSS
 	"tailwindCSS.emmetCompletions": true,
